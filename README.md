@@ -9,10 +9,6 @@ This project is deployed and available here:
 
 - Production URL: https://youleap-pro.vercel.app/
 
-## Screenshot
-
-![Youleap landing page preview](./public/website-preview.svg)
-
 ## Tech stack
 
 - Next.js 16 (App Router)
