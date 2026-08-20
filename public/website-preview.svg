@@ -1,0 +1,69 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F3F7FB"/>
+  <ellipse cx="320" cy="760" rx="360" ry="110" fill="#D9EAF9"/>
+  <ellipse cx="1150" cy="760" rx="350" ry="110" fill="#D9EAF9"/>
+
+  <g opacity="0.25">
+    <path d="M540 755C680 710 810 700 980 725" stroke="#A9B9CC" stroke-dasharray="10 10" stroke-width="3"/>
+    <circle cx="980" cy="725" r="8" fill="#A9B9CC"/>
+  </g>
+
+  <g transform="translate(150, 530)">
+    <path d="M0 80C0 35.8172 35.8172 0 80 0H310C354.183 0 390 35.8172 390 80V140C390 184.183 354.183 220 310 220H80C35.8172 220 0 184.183 0 140V80Z" fill="#1E8BFF"/>
+    <path d="M80 0L255 80L390 80V140L255 220L80 140V0Z" fill="#2B9BFF"/>
+    <path d="M65 80L260 160L370 80" stroke="#0A5EC3" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M110 125L160 165L198 130" stroke="#F8FAFD" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M190 145L260 104L315 132" stroke="#EAF7FF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="310" cy="80" r="34" fill="#0D78E8"/>
+    <path d="M293 80H327" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    <path d="M310 63V97" stroke="white" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(100, 110)">
+    <rect x="0" y="0" width="700" height="120" rx="38" fill="#F9FBFE"/>
+    <rect x="25" y="28" width="158" height="60" rx="30" fill="#EFF6FF"/>
+    <text x="96" y="68" text-anchor="middle" fill="#1C71D8" font-size="26" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="1.5">LET'S CONNECT</text>
+  </g>
+
+  <g>
+    <text x="90" y="300" fill="#0B1333" font-size="118" font-weight="900" font-family="Arial, Helvetica, sans-serif">Start a conversation</text>
+    <text x="90" y="430" fill="#0B1333" font-size="118" font-weight="900" font-family="Arial, Helvetica, sans-serif">with us.</text>
+    <text x="90" y="520" fill="#475574" font-size="32" font-weight="400" font-family="Arial, Helvetica, sans-serif">Have a question or an idea you would like to explore? Send us a</text>
+    <text x="90" y="560" fill="#475574" font-size="32" font-weight="400" font-family="Arial, Helvetica, sans-serif">message and we’ll get back to you soon.</text>
+  </g>
+
+  <g transform="translate(930, 110)">
+    <rect x="0" y="0" width="540" height="610" rx="36" fill="#F2F5F8" stroke="#E2E8F0"/>
+    <text x="50" y="75" fill="#1E2A39" font-size="42" font-weight="700" font-family="Arial, Helvetica, sans-serif">Send us a message</text>
+    <text x="50" y="125" fill="#64748B" font-size="28" font-weight="400" font-family="Arial, Helvetica, sans-serif">Fill in the form below and we’ll be in touch.</text>
+
+    <g transform="translate(50, 170)">
+      <text x="0" y="0" fill="#3C4B67" font-size="28" font-weight="500" font-family="Arial, Helvetica, sans-serif">Full name</text>
+      <rect x="0" y="24" width="440" height="60" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <path d="M26 59C26 47.9543 34.9543 39 46 39H70C81.0457 39 90 47.9543 90 59V65H26V59Z" fill="#D5E3F8"/>
+      <circle cx="58" cy="50" r="10" fill="#D5E3F8"/>
+      <text x="115" y="64" fill="#95A3B8" font-size="26" font-weight="400" font-family="Arial, Helvetica, sans-serif">Jane Smith</text>
+    </g>
+
+    <g transform="translate(50, 285)">
+      <text x="0" y="0" fill="#3C4B67" font-size="28" font-weight="500" font-family="Arial, Helvetica, sans-serif">Email address</text>
+      <rect x="0" y="24" width="440" height="60" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <path d="M26 52H95" stroke="#D5E3F8" stroke-width="3" stroke-linecap="round"/>
+      <path d="M26 43L58 63L90 43" stroke="#D5E3F8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="115" y="64" fill="#95A3B8" font-size="26" font-weight="400" font-family="Arial, Helvetica, sans-serif">jane@example.com</text>
+    </g>
+
+    <g transform="translate(50, 400)">
+      <text x="0" y="0" fill="#3C4B67" font-size="28" font-weight="500" font-family="Arial, Helvetica, sans-serif">Message</text>
+      <rect x="0" y="24" width="440" height="120" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="18" y="85" fill="#95A3B8" font-size="26" font-weight="400" font-family="Arial, Helvetica, sans-serif">Tell us how we can help...</text>
+    </g>
+
+    <text x="50" y="570" fill="#7D8AA5" font-size="20" font-weight="400" font-family="Arial, Helvetica, sans-serif">Up to 2,000 characters.</text>
+
+    <rect x="50" y="590" width="440" height="62" rx="18" fill="#1C8AF5"/>
+    <text x="260" y="630" text-anchor="middle" fill="white" font-size="28" font-weight="700" font-family="Arial, Helvetica, sans-serif">Send message</text>
+    <path d="M360 612L390 628L360 644" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M360 612L400 612L400 646L360 646" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

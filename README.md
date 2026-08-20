@@ -1,6 +1,16 @@
 # Youleap Contact Landing Page
 
-A responsive landing page with an accessible contact form. Submissions are validated by a Next.js route handler and stored securely in Airtable without exposing credentials to the browser.
+A modern, responsive contact landing page built with Next.js and a polished form experience. It includes client-side validation, accessible form states, and a secure API route that saves submissions to Airtable without exposing credentials in the browser.
+
+## Live demo
+
+This project is deployed and available here:
+
+- Production URL: https://youleap-pro.vercel.app/
+
+## Screenshot
+
+![Youleap landing page preview](./public/website-preview.svg)
 
 ## Tech stack
 
@@ -9,6 +19,14 @@ A responsive landing page with an accessible contact form. Submissions are valid
 - TypeScript
 - Tailwind CSS 4
 - Airtable Web API
+
+## Features
+
+- Clean marketing-style landing page with strong headline and CTA layout
+- Accessible contact form with validation and friendly UX feedback
+- Secure server-side submission handling via Next.js API route
+- Airtable integration for storing contact messages
+- Responsive layout optimized for desktop and smaller screens
 
 ## Local setup
 
@@ -25,9 +43,9 @@ AIRTABLE_BASE_ID=your_airtable_base_id
 AIRTABLE_API_KEY=your_airtable_personal_access_token
 ```
 
-The Personal Access Token must have access to the selected base and include the `data.records:write` scope. Never commit `.env.local` or a real token.
+The personal access token must have access to the selected base and include the `data.records:write` scope. Never commit `.env.local` or a real token.
 
-The existing Airtable base must contain a table named `Table 1` with these fields:
+The Airtable base should contain a table named `Table 1` with these fields:
 
 - `Name` — single-line text
 - `Email` — email
@@ -43,7 +61,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Submission flow
 
-The browser posts the form data to `POST /api/submit`. The server validates and normalizes the values, then sends them to Airtable using server-only environment variables. The route returns a sanitized JSON response that the form presents as an accessible success or error message.
+The browser posts the form data to `POST /api/submit`. The server validates and normalizes the values, then sends them to Airtable using environment variables stored only on the server. The route returns a sanitized JSON response that the form presents as a success or error message.
 
 ## Verification
 
@@ -54,3 +72,9 @@ npm run lint
 npx tsc --noEmit
 npm run build
 ```
+
+## Deployment
+
+The app is currently deployed on Vercel:
+
+- Vercel: https://youleap-pro.vercel.app/
