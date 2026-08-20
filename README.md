@@ -1,4 +1,5 @@
 # Youleap Contact Landing Page
+<img width="938" height="415" alt="image" src="https://github.com/user-attachments/assets/ed71dd9a-6513-488f-b917-1336b9ab46bd" />
 
 A modern, responsive contact landing page built with Next.js and a polished form experience. It includes client-side validation, accessible form states, and a secure API route that saves submissions to Airtable without exposing credentials in the browser.
 
