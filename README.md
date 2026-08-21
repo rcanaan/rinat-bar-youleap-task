@@ -8,7 +8,7 @@ A modern, responsive contact landing page built with Next.js and a polished form
 
 This project is deployed and available here:
 
-- Production URL: https://youleap-pro.vercel.app/
+- Production URL: https://youleap-pro.vercel.app
 
 ## Tech stack
 
