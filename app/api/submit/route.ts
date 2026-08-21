@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-const AIRTABLE_TABLE_NAME = 'Table 1';
+const AIRTABLE_TABLE_NAME = "Table 1";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type Submission = {
@@ -10,27 +10,30 @@ type Submission = {
 };
 
 function isSubmission(value: unknown): value is Submission {
-  if (!value || typeof value !== 'object') {
+  if (!value || typeof value !== "object") {
     return false;
   }
 
   const submission = value as Record<string, unknown>;
 
   return (
-    typeof submission.fullName === 'string' &&
-    typeof submission.email === 'string' &&
-    typeof submission.message === 'string'
+    typeof submission.fullName === "string" &&
+    typeof submission.email === "string" &&
+    typeof submission.message === "string"
   );
 }
 
 export async function POST(request: Request) {
   const baseId = process.env.AIRTABLE_BASE_ID;
-  const apiKey = process.env.AIRTABLE_API_KEY;
+  const airtableToken = process.env.AIRTABLE_TOKEN;
 
-  if (!baseId || !apiKey) {
-    console.error('Airtable submission is not configured.');
+  if (!baseId || !airtableToken) {
+    console.error("Airtable submission is not configured.");
     return NextResponse.json(
-      { success: false, message: 'The form is temporarily unavailable. Please try again later.' },
+      {
+        success: false,
+        message: "The form is temporarily unavailable. Please try again later.",
+      },
       { status: 500 },
     );
   }
@@ -41,14 +44,14 @@ export async function POST(request: Request) {
     body = await request.json();
   } catch {
     return NextResponse.json(
-      { success: false, message: 'The submitted data is not valid.' },
+      { success: false, message: "The submitted data is not valid." },
       { status: 400 },
     );
   }
 
   if (!isSubmission(body)) {
     return NextResponse.json(
-      { success: false, message: 'Please complete all required fields.' },
+      { success: false, message: "Please complete all required fields." },
       { status: 400 },
     );
   }
@@ -59,14 +62,14 @@ export async function POST(request: Request) {
 
   if (!fullName || !email || !message) {
     return NextResponse.json(
-      { success: false, message: 'Please complete all required fields.' },
+      { success: false, message: "Please complete all required fields." },
       { status: 400 },
     );
   }
 
   if (!EMAIL_PATTERN.test(email)) {
     return NextResponse.json(
-      { success: false, message: 'Please enter a valid email address.' },
+      { success: false, message: "Please enter a valid email address." },
       { status: 400 },
     );
   }
@@ -75,10 +78,10 @@ export async function POST(request: Request) {
     const airtableResponse = await fetch(
       `https://api.airtable.com/v0/${baseId}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`,
       {
-        method: 'POST',
+        method: "POST",
         headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
+          Authorization: `Bearer ${airtableToken}`,
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           records: [
@@ -95,7 +98,7 @@ export async function POST(request: Request) {
     );
 
     if (!airtableResponse.ok) {
-      let errorType = 'unknown';
+      let errorType = "unknown";
 
       try {
         const airtableError = (await airtableResponse.json()) as {
@@ -106,25 +109,34 @@ export async function POST(request: Request) {
         // Airtable did not return a JSON error body.
       }
 
-      console.error('Airtable submission failed.', {
+      console.error("Airtable submission failed.", {
         status: airtableResponse.status,
         errorType,
       });
 
       return NextResponse.json(
-        { success: false, message: 'We could not send your message. Please try again.' },
+        {
+          success: false,
+          message: "We could not send your message. Please try again.",
+        },
         { status: 502 },
       );
     }
 
-    return NextResponse.json({ success: true, message: 'Thanks! Your message has been sent.' });
+    return NextResponse.json({
+      success: true,
+      message: "Thanks! Your message has been sent.",
+    });
   } catch (error) {
-    console.error('Airtable request could not be completed.', {
-      error: error instanceof Error ? error.name : 'unknown',
+    console.error("Airtable request could not be completed.", {
+      error: error instanceof Error ? error.name : "unknown",
     });
 
     return NextResponse.json(
-      { success: false, message: 'We could not send your message. Please try again.' },
+      {
+        success: false,
+        message: "We could not send your message. Please try again.",
+      },
       { status: 502 },
     );
   }
